@@ -25,6 +25,10 @@
     height: 275px;
     width: 100%;
     background: lightblue;
+    
+    @media (min-width: 767px) {
+        height: 300px;   
+    }
 
     .video-preview--wrapper {
         height: 100%;
@@ -44,8 +48,28 @@
 
         }
     }
+}
 
-    @media (min-width: 767px) {
-     height: 300px;   
+
+/***
+**** VIDEO DETAIL 
+***/
+.video-detail {
+    width: 100%;
+    background: lightpink;
+
+    .video-detail--wrapper {
+        height: 100%;
+
+        .video-detail__img {
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+
+            @media (min-width: 767px) {
+                width: 420px;
+            }
+
+        }
     }
 }
