@@ -1,0 +1,1 @@
+// Should return images at one of 3-4 default sizes meaning that we can easily have an image for an article, an image for a category page etc etc just by passing a prop when making one <Image src="example" size="small" 

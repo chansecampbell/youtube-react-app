@@ -1,0 +1,29 @@
+/*** 
+**** NAVBAR
+***/
+.navbar {
+    width: 100%;
+    height: 35px;
+    background: #e8e8e8;
+    padding: 5px;
+    margin-bottom: 7px;
+
+    .navbar--wrapper {
+        height: 100%;
+
+        .navbar__title {
+
+        }
+
+        .navbar__links {
+            text-align: right;
+
+            .links--text {
+                font-size: 12px;
+                margin: 0 15px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
+}
