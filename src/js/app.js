@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HomepageView from './views/homepage.jsx';
+import Homepage from './views/homepage.jsx';
+// const data = Videos;
+// console.log(Videos.data);
 
-ReactDOM.render(<HomepageView/>, document.getElementById('container'));
+ReactDOM.render(<Homepage />, document.getElementById('container'));

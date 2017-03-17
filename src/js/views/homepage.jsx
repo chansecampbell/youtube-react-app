@@ -3,10 +3,9 @@ import React from 'react';
 import Navbar from '../components/navbar.jsx';
 import VideoPreview from '../components/video-preview.jsx';
 import VideoDetail from '../components/video-detail.jsx';
-// import Videos from '../services/videos.js';
 import axios from 'axios';
 
-class HomepageView extends React.Component {
+class Homepage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,28 +23,20 @@ class HomepageView extends React.Component {
         });
     }
 
-    // listVideos() {
-    //      return this.state.videos.map(video => {
-    //         <VideoPreview name={video.snippet.title} />
-    //      });
-    // }
-
     render() {
         // if(this.state.videos.length > 1) {
         //     return <div>Nothing to see.</div>
         // } 
-        // console.log(this.state.videos);
         return (
             <div className="homepage">
                 <Navbar/>
 
                 <div className="body container">
-                    {/*{ this.listVideos() }*/}
-                    <VideoPreview value={this.state.videos}/>
+                    <VideoPreview videos={this.state.videos}/>
                 </div>  
             </div>
         );
     }
 }
 
-export default HomepageView;
+export default Homepage;
