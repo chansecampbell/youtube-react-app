@@ -30,10 +30,28 @@ class App extends React.Component {
             <div className="youtube-app">
                 <Navbar/>
                 <div className="body container">
-                    <div className="col-sm-12">
+                    <div className="col-sm-9 card card-2">
                         <Video videos={this.state.videos}/>
-                    </div>  
-                </div>
+                    </div> 
+
+                    <div className="col-sm-3">
+                        <div className="home__profile card card-2">
+                            <img src="./src/assets/images/headshot.jpg" className="home__profile--img" />
+                            <div>Chanse Campbell</div>
+                            <div><i className="fa fa-code-fork" aria-hidden="true"></i> Web Developer</div>
+                            <div><i className="fa fa-map-marker" aria-hidden="true"></i> London, England</div>
+                            <hr/>
+                            <div className="home__icons">
+                                <a href="http://www.github.com/chansecampbell" target="_blank"><i className="fa fa-github-square" aria-hidden="true"></i></a>
+                                <a href="http://www.linkedin.com/in/chansecampbell" target="_blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                                <a href="http://www.twitter.com/chansecampbell" target="_blank"><i className="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                <a href="mailto:chansecampbell@gmail.com?subject=Enquiry" target="_blank"><i className="fa fa-envelope" aria-hidden="true"></i></a>
+                            </div>
+                            <hr/>
+                        </div>
+                    </div> 
+
+                </div> 
             </div>
         );
     }

@@ -41,16 +41,16 @@ class VideoPreview extends React.Component {
         return this.props.videos.map(video => {
             console.log(video);
             return (
-                <div className="video-preview card card-2 row" key={video.id}>
+                <div className="video-preview row" key={video.id}>
 
                     <img src={ video.snippet.thumbnails.medium.url }
                         className="video-preview__img col-sm-8"
                         onClick={ () => this.selectVideo(video) }/>
 
                     <div className="video-preview__info col-sm-4">
-                        <h2 className="info__title" onClick={ () => this.selectVideo(video) }>
+                        <h3 className="info__title" onClick={ () => this.selectVideo(video) }>
                             { video.snippet.title }
-                        </h2>
+                        </h3>
                         <div className="info__date">Published on { video.snippet.publishedAt }</div>
                         <div className="info__synopsis">{ video.snippet.description }</div>
                     </div>
