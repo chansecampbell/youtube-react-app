@@ -2,8 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app.jsx';
-// const data = Videos;
-// console.log(Videos.data);
+import App from './components/app.jsx';
 
 ReactDOM.render(<App />, document.getElementById('container'));

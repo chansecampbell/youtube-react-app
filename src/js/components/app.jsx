@@ -1,8 +1,7 @@
 'use strict';
 import React from 'react';
 import Navbar from './navbar.jsx';
-import VideoPreview from '.video-preview.jsx';
-import VideoDetail from './video-detail.jsx';
+import Video from './video.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -31,7 +30,7 @@ class App extends React.Component {
             <div className="youtube-app">
                 <Navbar/>
                 <div className="body container">
-                    <VideoPreview videos={this.state.videos}/>
+                    <Video videos={this.state.videos}/>
                 </div>  
             </div>
         );

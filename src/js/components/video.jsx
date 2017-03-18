@@ -11,9 +11,7 @@ class VideoPreview extends React.Component {
         }
     }
 
-    selectVideo(video, e) {
-        e.stopPropagation();
-        
+    selectVideo(video) {
         this.setState({
             detail: !this.state.detail,
             video: video || Object()
@@ -25,11 +23,11 @@ class VideoPreview extends React.Component {
         return (
             <div className="video-detail">
                 <div className="video-detail--wrapper">
-                    <div onClick={ (e) => this.selectVideo() }>Back to list of videos</div>
+                    <div onClick={ () => this.selectVideo() }>Back to list of videos</div>
                     <div className="video-detail__title">{ this.state.video.snippet.title }</div>
                     <div className="video-detail__date">{ this.state.video.snippet.publishedAt }</div>
                     <div className="video-detail__video col-sm-8">
-                        <iframe width="560" height="315" src={url} frameborder="0" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src={url} frameBorder="0" allowFullScreen></iframe>
                     </div>
                     <div className="video-detail__info col-sm-4">
                         <div className="info__synopsis">{ this.state.video.snippet.description }</div>
@@ -41,9 +39,8 @@ class VideoPreview extends React.Component {
 
     buildPreviews() {
         return this.props.videos.map(video => {
-            console.log(video);
             return (
-                <div className="video-preview--wrapper">
+                <div className="video-preview--wrapper" key={video.id}>
                     <img src={ video.snippet.thumbnails.high.url } className="video-preview__img col-sm-8" onClick={ () => this.selectVideo(video) }/>
                     <div className="video-preview__info col-sm-4">
                         <div className="info__title" onClick={ () => this.selectVideo(video) }>
