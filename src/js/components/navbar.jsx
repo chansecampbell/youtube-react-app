@@ -8,9 +8,9 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <div className="navbar">
-                <div className="navbar--wrapper container">
-                    <div className="navbar__title col-sm-12">My Youtube Playlist</div>
+            <div className="nav">
+                <div className="nav--wrapper container">
+                    <h3 className="nav__title col-sm-12">My Youtube Playlist</h3>
                 </div>
             </div>
         );

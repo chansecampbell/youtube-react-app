@@ -26,11 +26,11 @@ class VideoPreview extends React.Component {
                     <div onClick={ () => this.selectVideo() }>Back to list of videos</div>
                     <div className="video-detail__title">{ this.state.video.snippet.title }</div>
                     <div className="video-detail__date">{ this.state.video.snippet.publishedAt }</div>
-                    <div className="video-detail__video col-sm-8">
+                    <div className="video-detail__video">
                         <iframe width="560" height="315" src={url} frameBorder="0" allowFullScreen></iframe>
                     </div>
-                    <div className="video-detail__info col-sm-4">
-                        <div className="info__synopsis">{ this.state.video.snippet.description }</div>
+                    <div className="video-detail__info">
+                        <h2 className="info__synopsis">{ this.state.video.snippet.description }</h2>
                     </div>
                 </div> 
             </div>
@@ -39,16 +39,22 @@ class VideoPreview extends React.Component {
 
     buildPreviews() {
         return this.props.videos.map(video => {
+            console.log(video);
             return (
-                <div className="video-preview--wrapper" key={video.id}>
-                    <img src={ video.snippet.thumbnails.high.url } className="video-preview__img col-sm-8" onClick={ () => this.selectVideo(video) }/>
+                <div className="video-preview card card-2 row" key={video.id}>
+
+                    <img src={ video.snippet.thumbnails.medium.url }
+                        className="video-preview__img col-sm-8"
+                        onClick={ () => this.selectVideo(video) }/>
+
                     <div className="video-preview__info col-sm-4">
-                        <div className="info__title" onClick={ () => this.selectVideo(video) }>
+                        <h2 className="info__title" onClick={ () => this.selectVideo(video) }>
                             { video.snippet.title }
-                        </div>
-                        <div className="info__date">{ video.snippet.publishedAt }</div>
+                        </h2>
+                        <div className="info__date">Published on { video.snippet.publishedAt }</div>
                         <div className="info__synopsis">{ video.snippet.description }</div>
                     </div>
+
                 </div>
             );
         });
@@ -56,7 +62,7 @@ class VideoPreview extends React.Component {
 
     render() {
         return (
-            <div className="video-wrapper container">
+            <div className="video--wrapper">
                 { !this.state.detail ? this.buildPreviews() : this.buildDetail() }
             </div>
         );

@@ -30,8 +30,10 @@ class App extends React.Component {
             <div className="youtube-app">
                 <Navbar/>
                 <div className="body container">
-                    <Video videos={this.state.videos}/>
-                </div>  
+                    <div className="col-sm-12">
+                        <Video videos={this.state.videos}/>
+                    </div>  
+                </div>
             </div>
         );
     }
