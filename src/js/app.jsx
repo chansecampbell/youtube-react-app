@@ -1,11 +1,11 @@
 'use strict';
 import React from 'react';
-import Navbar from '../components/navbar.jsx';
-import VideoPreview from '../components/video-preview.jsx';
-import VideoDetail from '../components/video-detail.jsx';
+import Navbar from './navbar.jsx';
+import VideoPreview from '.video-preview.jsx';
+import VideoDetail from './video-detail.jsx';
 import axios from 'axios';
 
-class Homepage extends React.Component {
+class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -28,9 +28,8 @@ class Homepage extends React.Component {
         //     return <div>Nothing to see.</div>
         // } 
         return (
-            <div className="homepage">
+            <div className="youtube-app">
                 <Navbar/>
-
                 <div className="body container">
                     <VideoPreview videos={this.state.videos}/>
                 </div>  
@@ -39,4 +38,4 @@ class Homepage extends React.Component {
     }
 }
 
-export default Homepage;
+export default App;

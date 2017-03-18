@@ -11,7 +11,9 @@ class VideoPreview extends React.Component {
         }
     }
 
-    selectVideo(video) {
+    selectVideo(video, e) {
+        e.stopPropagation();
+        
         this.setState({
             detail: !this.state.detail,
             video: video || Object()
@@ -22,8 +24,8 @@ class VideoPreview extends React.Component {
         const url = "https://www.youtube.com/embed/" + this.state.video.snippet.resourceId.videoId;
         return (
             <div className="video-detail">
-                <div className="video-detail--wrapper container">
-                    <div onClick={ () => this.selectVideo() }>Back to list of videos</div>
+                <div className="video-detail--wrapper">
+                    <div onClick={ (e) => this.selectVideo() }>Back to list of videos</div>
                     <div className="video-detail__title">{ this.state.video.snippet.title }</div>
                     <div className="video-detail__date">{ this.state.video.snippet.publishedAt }</div>
                     <div className="video-detail__video col-sm-8">
@@ -32,18 +34,17 @@ class VideoPreview extends React.Component {
                     <div className="video-detail__info col-sm-4">
                         <div className="info__synopsis">{ this.state.video.snippet.description }</div>
                     </div>
-                </div>
+                </div> 
             </div>
         );  
     }
 
     buildPreviews() {
         return this.props.videos.map(video => {
+            console.log(video);
             return (
-                <div className="video-preview--wrapper container">
-                    <div className="video-preview__img col-sm-8" onClick={ () => this.selectVideo(video) }>
-                        <img src={ video.snippet.thumbnails.default.url }/>
-                    </div>
+                <div className="video-preview--wrapper">
+                    <img src={ video.snippet.thumbnails.high.url } className="video-preview__img col-sm-8" onClick={ () => this.selectVideo(video) }/>
                     <div className="video-preview__info col-sm-4">
                         <div className="info__title" onClick={ () => this.selectVideo(video) }>
                             { video.snippet.title }
@@ -58,7 +59,7 @@ class VideoPreview extends React.Component {
 
     render() {
         return (
-            <div className="video-preview">
+            <div className="video-wrapper container">
                 { !this.state.detail ? this.buildPreviews() : this.buildDetail() }
             </div>
         );

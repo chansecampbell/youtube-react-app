@@ -14,7 +14,7 @@ gulp.task("sass", () => {
 
 // grabs all of the js code and using the webpack config turns it into a singular js file
 gulp.task('js', () => {
-    return gulp.src('./src/js/app.js')
+    return gulp.src('./src/js/index.js')
         .pipe(webpack( require('./webpack.config.js') ))
         .pipe(rename("bundle.js"))
         .pipe(gulp.dest('./dist/js'));

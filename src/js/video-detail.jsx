@@ -9,7 +9,7 @@ class VideoDetail extends React.Component {
     render() {
         return (
             <div className="video-detail">
-                <div className="video-detail--wrapper container">
+                <div className="video-detail--wrapper">
                     <div className="video-detail__title">Sample Video Name</div>
                     <div className="video-detail__date">Sample Date</div>
                     <div className="video-detail__video col-sm-8"></div>

@@ -1,1 +1,0 @@
-// take a prop to create specified font sizes
