@@ -20,34 +20,39 @@ class VideoPreview extends React.Component {
 
     buildDetail() {
         const url = "https://www.youtube.com/embed/" + this.state.video.snippet.resourceId.videoId;
+        const backMessage = "< Back to list of videos";
         return (
-            <div className="video-detail">
-                <div className="video-detail--wrapper">
-                    <div onClick={ () => this.selectVideo() }>Back to list of videos</div>
-                    <div className="video-detail__title">{ this.state.video.snippet.title }</div>
-                    <div className="video-detail__date">{ this.state.video.snippet.publishedAt }</div>
-                    <div className="video-detail__video">
-                        <iframe width="560" height="315" src={url} frameBorder="0" allowFullScreen></iframe>
-                    </div>
-                    <div className="video-detail__info">
-                        <h2 className="info__synopsis">{ this.state.video.snippet.description }</h2>
-                    </div>
-                </div> 
+            <div className="video-detail row">
+
+                <div className="video-detail__top-info col-sm-12">
+                    <div className="top-info__back" onClick={ () => this.selectVideo() }> { backMessage }</div>
+                    <h3 className="top-info__title">{ this.state.video.snippet.title }</h3>
+                    <div className="top-info__date">{ this.state.video.snippet.publishedAt }</div>
+                </div>
+
+                <div className="col-sm-6">
+                    <iframe width="560" height="315" src={url} frameBorder="0" allowFullScreen className="video-detail__iframe"></iframe>
+                </div>
+                <div className="video-detail__btm-info col-sm-6">
+                    <div className="btm-info__synopsis">{ this.state.video.snippet.description }</div>
+                </div>
+
             </div>
         );  
     }
 
     buildPreviews() {
         return this.props.videos.map(video => {
-            console.log(video);
             return (
                 <div className="video-preview row" key={video.id}>
+                    
+                    <div className="col-sm-6">
+                        <img src={ video.snippet.thumbnails.medium.url }
+                            className="video-preview__img"
+                            onClick={ () => this.selectVideo(video) }/>
+                    </div>
 
-                    <img src={ video.snippet.thumbnails.medium.url }
-                        className="video-preview__img col-sm-8"
-                        onClick={ () => this.selectVideo(video) }/>
-
-                    <div className="video-preview__info col-sm-4">
+                    <div className="video-preview__info col-sm-6">
                         <h3 className="info__title" onClick={ () => this.selectVideo(video) }>
                             { video.snippet.title }
                         </h3>
