@@ -1,4 +1,4 @@
-#Youtube React App
+# Youtube React App
 -
 
 A simple frontend React application written in ES6 JSX and compiled using Babel & Webpack with Gulp.
@@ -10,7 +10,7 @@ The project initially had a more complex JS component structure, but this was st
 To view the project online, simply go to ___.
 
 
-##Getting setup locally
+## Getting setup locally
 If you would like to otherwise run the project locally then you will need to setup the project by doing the following:
 
 1. Run `npm install` to install the package dependencies.
