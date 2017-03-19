@@ -1,6 +1,7 @@
 'use strict';
 import React from 'react';
 
+/** This builds a Video component which takes an array of data */
 class VideoPreview extends React.Component {
     constructor(props) {
         super(props);
@@ -18,10 +19,12 @@ class VideoPreview extends React.Component {
         });
     }
 
+/** If the state of detail is updated to true upon click, a rerender will be triggered and a single item will be built */
     buildDetail() {
         const url = "https://www.youtube.com/embed/" + this.state.video.snippet.resourceId.videoId;
         const date = new Date(this.state.video.snippet.publishedAt);
         const backMessage = "< Back to list of videos";
+        const description = this.state.video.snippet.description ? this.state.video.snippet.description : "No description provided.";
         
         return (
             <div className="video-detail row">
@@ -36,17 +39,19 @@ class VideoPreview extends React.Component {
                     <iframe width="560" height="315" src={url} frameBorder="0" allowFullScreen className="video-detail__iframe"></iframe>
                 </div>
                 <div className="video-detail__btm-info col-sm-6">
-                    <div className="btm-info__synopsis">{ this.state.video.snippet.description }</div>
+                    <div className="btm-info__synopsis">{ description }</div>
                 </div>
 
             </div>
         );  
     }
 
+/** By default a list of items are built */
     buildPreviews() {
         return this.props.videos.map(video => {
 
             const date = new Date(video.snippet.publishedAt);
+            const description = video.snippet.description ? video.snippet.description : "No description provided.";
 
             return (
                 <div className="video-preview row" key={video.id} role="listitem">
@@ -64,7 +69,7 @@ class VideoPreview extends React.Component {
                             { video.snippet.title }
                         </h3>
                         <div className="info__date">Published on {date.toDateString()}</div>
-                        <div className="info__synopsis">{ video.snippet.description }</div>
+                        <div className="info__synopsis">{ description }</div>
                     </div>
 
                 </div>

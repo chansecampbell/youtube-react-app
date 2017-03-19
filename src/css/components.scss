@@ -15,11 +15,16 @@
 
         .nav__title {
             text-align: left;
+            display: inline;
+            position: absolute;
+            top: 15px;
+            font-family: 'Barrio', cursive;
         }
 
         .nav__img {
             height: 37px;
             width: auto;
+            margin-right: 10px;
         }
     }
 }
@@ -70,7 +75,7 @@
     }
 
     .profile-card__icons {
-        i { font-size: 32px; color: #EC407A; padding: 5px; }
+        i { font-size: 32px; color: #d73936; padding: 5px; }
     }
 }
 

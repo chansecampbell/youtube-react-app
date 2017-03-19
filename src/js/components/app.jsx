@@ -5,6 +5,9 @@ import Video from './video.jsx';
 import ProfileCard from './profile-card.jsx';
 import axios from 'axios';
 
+/** This component displays the one-page app content by rendering the building block components
+ * The Youtube API request is also made from within here.
+ */
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -30,6 +33,10 @@ class App extends React.Component {
                 <Navbar title="Chanse's Youtube Playlist" />
 
                 <div className="body container">
+                    <div className="body--left col-md-9 card card-2">
+                        <Video videos={this.state.videos}/>
+                    </div> 
+
                     <div className="body--right col-md-3">
                         <ProfileCard name="Chanse Campbell"
                                     occupation="Web Developer"
@@ -37,9 +44,6 @@ class App extends React.Component {
                                     githubURL="https://github.com/chansecampbell/youtube-react-app" />
                     </div> 
 
-                    <div className="body--left col-md-9 card card-2">
-                        <Video videos={this.state.videos}/>
-                    </div> 
 
                 </div> 
 

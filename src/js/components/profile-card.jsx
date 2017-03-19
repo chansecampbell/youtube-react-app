@@ -1,14 +1,18 @@
 'use strict';
 import React from 'react';
 
+/** This builds a Profile Card component which takes user inputted parameters to complete the card 
+ * Possible props: name, occupation, location and githubURL
+*/
+
 class ProfileCard extends React.Component {
     constructor(props) {
         super(props);
     }
 
-    render() {
+render() {
         return (
-            <div className="profile-card card card-2" role="personal-profile">
+            <div className="profile-card card card-1" role="personal-profile">
                 <img src="./src/assets/images/headshot.jpg" className="profile-card__img" alt="A profile picture of the playlist owner" />
                 <div>{ this.props.name }</div>
                 <div><i className="fa fa-code-fork" aria-hidden="true"></i> { this.props.occupation }</div>

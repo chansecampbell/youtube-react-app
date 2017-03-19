@@ -10,4 +10,3 @@
 - Mobile restacking of elements
 - Basic JS tests
 - Linting
-- Add to the header, custom logo, extra icons?
