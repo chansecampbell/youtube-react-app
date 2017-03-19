@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: navbar.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,41 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: navbar.jsx</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+import React from 'react';
 
+/** This creates a simple Navbar that could be used across all pages, were more to be made.
+ * It takes a custom title prop to be displayed beside the logo
+ */
+class Navbar extends React.Component {
+	constructor(props) {
+		super(props);
+    }
 
-    <h3> </h3>
+	render() {
+        return (
+            &lt;div className="nav card card-2" role="navigation">
+                &lt;div className="nav--wrapper container">
+                    &lt;img src="./src/assets/images/youtube-logo.png" className="nav__img" alt="Picture of the youtube logo"/>
+                    &lt;span className="nav__title">{ this.props.title }&lt;/span>
+                &lt;/div>
+            &lt;/div>
+        );
+    }
+}
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+export default Navbar;</code></pre>
+        </article>
+    </section>
 
 
 
