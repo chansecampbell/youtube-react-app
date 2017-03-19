@@ -4,8 +4,7 @@
   "description": "A basic React app that takes data from the Youtube API.",
   "main": "app.js",
   "scripts": {
-    "start": "python -m SimpleHTTPServer & gulp watch",
-    "postinstall": "gulp build"
+    "start": "python -m SimpleHTTPServer & gulp watch"
   },
   "author": "Chanse Campbell",
   "license": "ISC",
@@ -13,7 +12,9 @@
     "axios": "^0.15.3",
     "jsdoc": "^3.4.3",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-preset-es2015": "^6.22.0",
