@@ -1,5 +1,4 @@
-# Youtube React App
--
+## Youtube React App
 
 A simple frontend React application written in ES6 JSX and compiled using Babel & Webpack with Gulp.
 
