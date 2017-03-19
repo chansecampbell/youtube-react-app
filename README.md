@@ -8,7 +8,6 @@
 * To add to codebase:
 - Multi line ellipsis
 - Mobile restacking of elements
-- JS and CSS gulp minification
 - Basic JS tests
 - Linting
 - Add to the header, custom logo, extra icons?

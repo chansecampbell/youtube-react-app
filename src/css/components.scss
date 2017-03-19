@@ -54,27 +54,23 @@
 /***
 ******** LEFT PROFILE PANEL
 ***/
-
-.body--left {
+.profile-card {
     display: none;
 
     @media (min-width: 991px) {
         display: inline-block;
-    }
-
-    .left__profile {
         padding: 15px;
         text-align: center;
+    }
+    
+    .profile-card__img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+    }
 
-        .left__profile--img {
-            width: 100%;
-            height: 100%;
-            margin-bottom: 10px;
-        }
-
-        .left__icons {
-            i { font-size: 32px; color: #EC407A; padding: 5px; }
-        }
+    .profile-card__icons {
+        i { font-size: 32px; color: #EC407A; padding: 5px; }
     }
 }
 

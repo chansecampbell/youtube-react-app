@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from './navbar.jsx';
 import Video from './video.jsx';
+import ProfileCard from './profile-card.jsx';
 import axios from 'axios';
 
 class App extends React.Component {
@@ -26,27 +27,18 @@ class App extends React.Component {
         return (
             <div className="youtube-app">
 
-                <Navbar/>
+                <Navbar title="Chanse's Youtube Playlist" />
 
                 <div className="body container">
-
-                    <div className="col-md-9 card card-2">
-                        <Video videos={this.state.videos}/>
+                    <div className="body--right col-md-3">
+                        <ProfileCard name="Chanse Campbell"
+                                    occupation="Web Developer"
+                                    location="London, England"
+                                    githubURL="https://github.com/chansecampbell/youtube-react-app" />
                     </div> 
 
-                    <div className="body--left col-md-3">
-                        <div className="left__profile card card-2" role="personal-profile">
-                            <img src="./src/assets/images/headshot.jpg" className="left__profile--img" alt="A profile picture of Chanse Campbell, the owner of the playlist"/>
-                            <div>Chanse Campbell</div>
-                            <div><i className="fa fa-code-fork" aria-hidden="true"></i> Web Developer</div>
-                            <div><i className="fa fa-map-marker" aria-hidden="true"></i> London, England</div>
-                            <hr/>
-                            <div className="left__icons">
-                                <h3>View the code: </h3>
-                                <a href="https://github.com/chansecampbell/youtube-react-app" target="_blank"><i className="fa fa-github-square" aria-hidden="true"></i></a>
-                            </div>
-                            <hr/>
-                        </div>
+                    <div className="body--left col-md-9 card card-2">
+                        <Video videos={this.state.videos}/>
                     </div> 
 
                 </div> 

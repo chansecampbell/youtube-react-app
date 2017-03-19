@@ -29,7 +29,7 @@ class VideoPreview extends React.Component {
                 <div className="video-detail__top-info col-sm-12">
                     <div className="top-info__back" role="button" onClick={ () => this.selectVideo() }> { backMessage }</div>
                     <h3 className="top-info__title">{ this.state.video.snippet.title }</h3>
-                    <div className="top-info__date">Published on { date.toDateString() }</div>
+                    <div className="top-info__date">Published on {date.toDateString()}</div>
                 </div>
 
                 <div className="col-sm-6">
@@ -63,7 +63,7 @@ class VideoPreview extends React.Component {
                         <h3 className="info__title" role="button" onClick={ () => this.selectVideo(video) }>
                             { video.snippet.title }
                         </h3>
-                        <div className="info__date">Published on { date.toDateString() }</div>
+                        <div className="info__date">Published on {date.toDateString()}</div>
                         <div className="info__synopsis">{ video.snippet.description }</div>
                     </div>
 
