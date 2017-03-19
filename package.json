@@ -4,7 +4,9 @@
   "description": "A basic React app that takes data from the Youtube API.",
   "main": "app.js",
   "scripts": {
-    "start": "python -m SimpleHTTPServer & gulp watch"
+    "start": "python -m SimpleHTTPServer & gulp watch",
+    "build": "gulp build",
+    "heroku-postbuild": "gulp build"
   },
   "author": "Chanse Campbell",
   "license": "ISC",
