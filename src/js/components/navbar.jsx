@@ -8,7 +8,7 @@ class Navbar extends React.Component {
 
     render() {
         return (
-            <div className="nav card card-2">
+            <div className="nav card card-2" role="navigation">
                 <div className="nav--wrapper container">
                     <h3 className="nav__title col-sm-12">My Youtube Playlist</h3>
                 </div>

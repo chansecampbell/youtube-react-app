@@ -38,8 +38,8 @@ class App extends React.Component {
                     </div> 
 
                     <div className="body--left col-md-3">
-                        <div className="left__profile card card-2">
-                            <img src="./src/assets/images/headshot.jpg" className="left__profile--img" />
+                        <div className="left__profile card card-2" role="personal-profile">
+                            <img src="./src/assets/images/headshot.jpg" className="left__profile--img" alt="A profile picture of Chanse Campbell, the owner of the playlist"/>
                             <div>Chanse Campbell</div>
                             <div><i className="fa fa-code-fork" aria-hidden="true"></i> Web Developer</div>
                             <div><i className="fa fa-map-marker" aria-hidden="true"></i> London, England</div>
