@@ -22,6 +22,7 @@ class VideoPreview extends React.Component {
         const url = "https://www.youtube.com/embed/" + this.state.video.snippet.resourceId.videoId;
         const date = new Date(this.state.video.snippet.publishedAt);
         const backMessage = "< Back to list of videos";
+        
         return (
             <div className="video-detail row">
 

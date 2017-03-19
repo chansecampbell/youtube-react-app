@@ -6,10 +6,8 @@
 
 
 * To add to codebase:
-- Finish video details page
-- Ensure 100% responsive
-- HTML accessibility
-- Tidy JS code
+- Multi line ellipsis
+- Mobile restacking of elements
 - JS and CSS gulp minification
 - Basic JS tests
 - Linting

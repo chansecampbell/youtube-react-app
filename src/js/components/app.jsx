@@ -23,9 +23,6 @@ class App extends React.Component {
     }
 
     render() {
-        // if(this.state.videos.length > 1) {
-        //     return <div>Nothing to see.</div>
-        // } 
         return (
             <div className="youtube-app">
 

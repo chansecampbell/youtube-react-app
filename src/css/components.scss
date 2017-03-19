@@ -17,36 +17,13 @@
             text-align: left;
         }
 
-    }
-}
-
-
-/***
-******** PROFILE CARD 
-***/
-
-.body--left {
-    display: none;
-
-    @media (min-width: 991px) {
-        display: inline-block;
-    }
-
-    .left__profile {
-        padding: 15px;
-        text-align: center;
-
-        .left__profile--img {
-            width: 100%;
-            height: 100%;
-            margin-bottom: 10px;
-        }
-
-        .left__icons {
-            i { font-size: 32px; color: #EC407A; padding: 5px; }
+        .nav__img {
+            height: 37px;
+            width: auto;
         }
     }
 }
+
 
 /***
 ******** CARDS
@@ -75,7 +52,34 @@
 
 
 /***
-******** VIDEO 
+******** LEFT PROFILE PANEL
+***/
+
+.body--left {
+    display: none;
+
+    @media (min-width: 991px) {
+        display: inline-block;
+    }
+
+    .left__profile {
+        padding: 15px;
+        text-align: center;
+
+        .left__profile--img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .left__icons {
+            i { font-size: 32px; color: #EC407A; padding: 5px; }
+        }
+    }
+}
+
+/***
+******** VIDEO PREVIEW LIST
 ***/
 .video--wrapper {
 
@@ -129,6 +133,9 @@
     }
 
 
+/***
+******** VIDEO DETAIL PANEL
+***/
     .video-detail {
         padding: 10px 5px;
         min-height: 600px;
