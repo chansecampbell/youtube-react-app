@@ -1,6 +1,9 @@
 {
   "name": "youtube-react-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.9.1"
+  },
   "description": "A basic React app that takes data from the Youtube API.",
   "main": "app.js",
   "scripts": {
