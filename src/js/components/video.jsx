@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 
 /** This builds a Video component which takes an array of data */

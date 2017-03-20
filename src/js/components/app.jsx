@@ -1,4 +1,3 @@
-'use strict';
 import React from 'react';
 import Navbar from './navbar.jsx';
 import Video from './video.jsx';
