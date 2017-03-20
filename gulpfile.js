@@ -24,7 +24,7 @@ gulp.task('js', () => {
 
 
 // compiles and minifies the SASS code for production
-gulp.task("sass-production", () => {
+gulp.task("sass-prod", () => {
     return gulp.src("./src/css/styles.scss")
         .pipe(sass())
         .pipe(rename("bundle.css"))
@@ -36,7 +36,7 @@ gulp.task("sass-production", () => {
 
 
 // compiles and minifies the JS code for production
-gulp.task('js-production', () => {
+gulp.task('js-prod', () => {
     return gulp.src('./src/js/index.js')
         .pipe(webpack( require('./webpack.prod.config.js') ))
         .pipe(rename("bundle.js"))
@@ -55,6 +55,6 @@ gulp.task('watch', () => {
 
 
 // only needs to be run once upon first use of code to build the initial dist folder + files
-gulp.task('build-development', ['js', 'sass']);
+gulp.task('build-dev', ['js', 'sass']);
 
-gulp.task('build-production', ['js-production', 'sass-production']);
+gulp.task('build-prod', ['js-prod', 'sass-prod']);
